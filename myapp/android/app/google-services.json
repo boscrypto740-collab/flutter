@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "530394253499",
+    "project_id": "bags-agent-market",
+    "storage_bucket": "bags-agent-market.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530394253499:android:66e489a7505d2130fc419e",
+        "android_client_info": {
+          "package_name": "com.bagsagentmarket.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPXRdT5gSHCkp2pk6CKO6VMJ_XEGeyYUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
