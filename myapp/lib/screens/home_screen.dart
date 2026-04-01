@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../models/item_model.dart';
 import '../services/firestore_service.dart';
+import '../services/notification_service.dart';
 
 class HomeScreen extends StatefulWidget {
   final User user;
@@ -12,8 +13,15 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final _firestoreService = FirestoreService();
+  final _notificationService = NotificationService();
   final _titleController = TextEditingController();
   final _descController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    _notificationService.initialize(context);
+  }
 
   void _showAddDialog() {
     showDialog(
@@ -65,7 +73,8 @@ class _HomeScreenState extends State<HomeScreen> {
             return const Center(child: CircularProgressIndicator());
           }
           if (!snapshot.hasData || snapshot.data!.isEmpty) {
-            return const Center(child: Text('Belum ada item. Tap + untuk menambah!'));
+            return const Center(
+              child: Text('Belum ada item. Tap + untuk menambah!'));
           }
           return ListView.builder(
             itemCount: snapshot.data!.length,
