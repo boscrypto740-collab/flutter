@@ -192,7 +192,7 @@ public class MainActivityTest {
 }
 ```
 
-Update your application's **myapp/android/app/build.gradle** to make sure it
+Update your application's **build.gradle** to make sure it
 uses androidx's version of `AndroidJUnitRunner` and has androidx libraries as a
 dependency.
 
